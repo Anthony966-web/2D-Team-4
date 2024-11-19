@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4354103927321193673}
   - component: {fileID: 5189664513137201667}
   m_Layer: 0
-  m_Name: Nun
+  m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

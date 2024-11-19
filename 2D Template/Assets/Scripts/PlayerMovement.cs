@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public KeyCode Left = KeyCode.A, Right = KeyCode.D, Up = KeyCode.W, Down = KeyCode.S, Parry = KeyCode.Q;
-    public float PlayerSpeed = 5;
+    public float PlayerSpeed = 3;
 
     private Rigidbody2D rb;
 

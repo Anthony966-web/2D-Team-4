@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 3176764806984913548}
   - component: {fileID: 3176764806984913551}
   m_Layer: 0
-  m_Name: Player
+  m_Name: MainPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   Up: 119
   Down: 115
   Parry: 113
-  PlayerSpeed: 2.5
+  PlayerSpeed: 3
 --- !u!1 &3176764807684758863
 GameObject:
   m_ObjectHideFlags: 0
