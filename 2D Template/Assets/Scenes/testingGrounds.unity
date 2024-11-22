@@ -305,8 +305,7 @@ PrefabInstance:
       propertyPath: rb
       value: 
       objectReference: {fileID: 1622029406}
-    m_RemovedComponents:
-    - {fileID: 3176764806984913549, guid: 2a4fee7ae853fa845aa46d8dd06db615, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3176764806984913538, guid: 2a4fee7ae853fa845aa46d8dd06db615, type: 3}
       insertIndex: -1
@@ -494,28 +493,12 @@ PrefabInstance:
       propertyPath: m_UseAutoMass
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5189664513137201667, guid: ea9e42214b546a144bbaf803e2034de3, type: 3}
-      propertyPath: m_Size.x
-      value: 1.0381268
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189664513137201667, guid: ea9e42214b546a144bbaf803e2034de3, type: 3}
-      propertyPath: m_Size.y
-      value: 0.16120958
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189664513137201667, guid: ea9e42214b546a144bbaf803e2034de3, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.5401301
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189664513137201667, guid: ea9e42214b546a144bbaf803e2034de3, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.30501467
-      objectReference: {fileID: 0}
     - target: {fileID: 5466927625214841357, guid: ea9e42214b546a144bbaf803e2034de3, type: 3}
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5189664513137201667, guid: ea9e42214b546a144bbaf803e2034de3, type: 3}
+    - {fileID: 4354103927321193673, guid: ea9e42214b546a144bbaf803e2034de3, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ea9e42214b546a144bbaf803e2034de3, type: 3}
 --- !u!4 &1989545827 stripped
