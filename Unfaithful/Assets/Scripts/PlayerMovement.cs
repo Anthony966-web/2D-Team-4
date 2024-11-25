@@ -57,4 +57,8 @@ public class PlayerMovement : MonoBehaviour
 
         WeaponRb.rotation = angle;
     }
+    public void physics()
+    {
+        rb.velocity = Vector3.zero;
+    }
 }
