@@ -24,5 +24,13 @@ public class Shooting : MonoBehaviour
         GameObject bullet = Instantiate(BulletPrefab, FirePiont.position, FirePiont.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(FirePiont.up * bulletForce, ForceMode2D.Impulse);
+        StartCoroutine(ShootBullet(bullet));
     }
+
+    private IEnumerator ShootBullet(GameObject bullet)
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(bullet);
+    }
+
 }
