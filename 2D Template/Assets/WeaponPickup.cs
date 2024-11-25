@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour
@@ -34,6 +35,7 @@ public class WeaponPickup : MonoBehaviour
         if (Input.GetKeyDown(Slot2))
         {
             EquipWeapon("Gun");
+            //WeaponHolder.transform.Find("Gun").GetComponent<Shooting>().enabled = true;
         }
 
         if (Input.GetKeyDown(Slot1))
@@ -76,6 +78,8 @@ public class WeaponPickup : MonoBehaviour
                     // Reset position and rotation relative to the WeaponHolder
                     newWeaponTransform.localPosition = Vector3.zero; // Sets position to (0, 0, 0)
                     newWeaponTransform.localRotation = Quaternion.identity; // Sets rotation to (0, 0, 0)
+                  
+                    newWeapon.transform.GetComponent<Shooting>().enabled = true;
 
                     Debug.Log(weaponName + " has been equipped and positioned!");
                 }
