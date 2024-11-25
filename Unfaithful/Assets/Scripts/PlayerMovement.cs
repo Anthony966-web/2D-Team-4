@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,16 +12,27 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Camera mainCamera;
 
+    private SpriteRenderer spriteRenderer;
+    public GameObject Weapon;
+    private Rigidbody2D WeaponRb;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        WeaponRb = Weapon.GetComponent<Rigidbody2D>();
         mainCamera = Camera.main;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if (movement.x != 0)
+        {
+            spriteRenderer.flipX = movement.x > 0;
+        }
 
         movement = movement.normalized;
 
@@ -30,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = movement * moveSpeed;
     }
-
     void RotateTowardsMouse()
     {
         Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -40,8 +52,10 @@ public class PlayerMovement : MonoBehaviour
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
+        Weapon.transform.position = new Vector2 (rb.position.x,rb.position.y);
 
-        rb.rotation = angle;
+
+        WeaponRb.rotation = angle;
     }
     public void physics()
     {
